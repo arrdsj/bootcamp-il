@@ -1,5 +1,5 @@
 /* Import font menggunakan API google */
-@import url('https://fonts.googleapis.com/css2?family-Poppins&display-swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
 
 /* Universal Selector (Bersifat Global) */
@@ -115,8 +115,28 @@ body {
     transition: .5s;
 }
 
+.btn-box a:hover{
+    color: var(--primer);
+}
+
+.active, .btn:hover {
+    color: white;
+}
+
+.btn-box a::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    background: var(--tersier);
+    z-index: -1;
+    transition: .5s;
+}
+
 .btn-box a:hover::before {
-    width:100%;
+    width: 100%;
 }
 
 /*sosmed */
